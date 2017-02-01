@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Cuprum|Lobster');
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  background: #B9A880;
+  font-family: 'Lobster', cursive;
+  font-family: 'Cuprum', sans-serif;
+  color: #101010;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  color: #424242;
+  margin: 10px auto 0 auto;
+}
+
+h2 {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 32px;
+  color: #424242;
+  margin: 18px auto;
+}
+
+p {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 20px;
+  line-height: 1.2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 200px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.instruction {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px auto;
+}
+
+footer {
+  position: fixed;
+  background: #B9A880;
+  margin: 20px auto 0px auto;
+  padding: 15px 0;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.child {
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #44c767;
+  /*-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;*/
+  border: 1px solid #44c767;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 16px;
+  padding: 16px 30px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #5cbf2a;
+}
+
+.large {
+  font-size: 35px;
+  margin: 40px auto 0 auto;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.regular {
+  width: 300px;
+  height: 232px;
+}
+
+
+/* The animation code */
+
+@keyframes spin0to90 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes spin90to180 {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes spin180to270 {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes spin270to360 {
+  from {
+    transform: rotate(270deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin0to90 {
+  animation-name: spin0to90;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.spin90to180 {
+  animation-name: spin90to180;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.spin180to270 {
+  animation-name: spin180to270;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.spin270to360 {
+  animation-name: spin270to360;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
