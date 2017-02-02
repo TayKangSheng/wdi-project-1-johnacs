@@ -104,7 +104,7 @@ var solutionArray = [
 // array for monitoring element orientation status
 var playArray = []
 
-function init () {
+function init() {
   // console.log(divContainer)
   currentLevel = 0 // start at level 1
   clearGrids()
@@ -113,23 +113,23 @@ function init () {
   loadLevel(currentLevel)
 }
 
-function showInstruction () {
+function showInstruction() {
   $('.instruction').append('<h2>How to play:</h2>')
   $('.instruction').append('<p>Click on any graphics element to rotate it. Connect all the lines and corners to make perfect connections.</p>')
 }
 
-function clearInstruction () {
+function clearInstruction() {
   $('.instruction').empty()
 }
 
-function displayGameOver () {
+function displayGameOver() {
   $('.levelText').text('')
   $('.instruction').append('<h2>Game Over.<br>Thank you for playing</h2>')
   $('.instruction').append('<button class=\'btn large\'>Start Again</button>')
   $('.btn').on('click', init)
 }
 
-function deepClone (arr) {
+function deepClone(arr) {
   var len = arr.length
   var newArr = new Array(len)
   for (var i = 0; i < len; i++) {
@@ -142,7 +142,7 @@ function deepClone (arr) {
   return newArr
 }
 
-function loadLevel (levelNum) {
+function loadLevel(levelNum) {
   // show instruction only at level 1
   if (levelNum === 1) {
     clearInstruction()
@@ -154,7 +154,7 @@ function loadLevel (levelNum) {
 
   // for each row
   var element1Index = 0
-  levelArray[levelNum].forEach(function (curLevel) {
+  levelArray[levelNum].forEach(function(curLevel) {
     // console.log('row: ' + curLevel)
     // create row div here
     var divRow = document.createElement('div')
@@ -162,7 +162,7 @@ function loadLevel (levelNum) {
     divContainer.appendChild(divRow)
     // init
     var element2Index = 0
-    curLevel.forEach(function (item) {
+    curLevel.forEach(function(item) {
       // console.log('level :' + item)
       // create div for each image
       var newDiv = document.createElement('div')
@@ -186,16 +186,16 @@ function loadLevel (levelNum) {
   })
 }
 
-function displaySolution (levelNum) {
+function displaySolution(levelNum) {
   // for each row
-  solutionArray[levelNum].forEach(function (solLevel) {
+  solutionArray[levelNum].forEach(function(solLevel) {
     // console.log('row: ' + solLevel)
     // create row div here
     var divRow = document.createElement('div')
     divRow.classList.add('parent')
     divContainer.appendChild(divRow)
     // init
-    solLevel.forEach(function (item) {
+    solLevel.forEach(function(item) {
       // console.log('level :' + item)
       // create div for each image
       var newDiv = document.createElement('div')
@@ -214,7 +214,7 @@ function displaySolution (levelNum) {
   $('button').on('click', buttonNextLevel)
 }
 
-function buttonNextLevel () {
+function buttonNextLevel() {
   clearGrids()
   currentLevel += 1
   if (solutionArray.length == currentLevel) {
@@ -222,7 +222,7 @@ function buttonNextLevel () {
   } else loadLevel(currentLevel)
 }
 
-function updatePlayArray (elm) {
+function updatePlayArray(elm) {
   // eg: 2d array [[11, 21, 13], [11, 23, 13]]
   // playArray index to change to new rotated element
   var next2ndDigit = null
@@ -263,7 +263,7 @@ function updatePlayArray (elm) {
   }
 }
 
-function clearGrids () {
+function clearGrids() {
   // clear solution div and graphics
   while (divContainer.hasChildNodes()) {
     divContainer.removeChild(divContainer.firstChild)
@@ -271,7 +271,7 @@ function clearGrids () {
   $('.buttonDiv').empty()
 }
 
-function checkSolution () {
+function checkSolution() {
   var result = []
   var levelPlay = playArray
 
@@ -295,7 +295,7 @@ function checkSolution () {
   } else return false
 }
 
-function rotate () {
+function rotate() {
   var flag = this.getAttribute('data-flag')
   console.log(flag)
   if (flag === 'false') {
@@ -346,12 +346,12 @@ function rotate () {
   }
 }
 
-function myEndFunction () {
+function myEndFunction() {
   console.log('transistion ends')
   this.setAttribute('data-flag', 'false')
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
   console.log('ready!')
   init()
 })

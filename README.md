@@ -119,7 +119,7 @@ Type 0 graphic element:
 
 ---
 
-#### Technlogies used:
+#### Technologies used:
 ```
 - HTML5
 - CSS3
