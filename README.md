@@ -12,6 +12,9 @@ Click on any graphic element to rotate it.
 
 Connect all the lines and corners to make perfect connections.
 
+---
+
+
 ## Game Mechanics
 
 Using level 1 as an example:
@@ -19,15 +22,16 @@ Using level 1 as an example:
 ![Level 1](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level1.jpg)
 
 
-* each level has a 2D start array (var levelArray) and 2D solution array (var solutionArray)
-* there are 6 graphic elements into two rows
+* each level has a 2D start array (var levelArray) and 2D solution array (var solutionArray).
+* there are 6 graphic elements into two rows.
 * each graphic element corresponds to a "type".
-*See Game Elements below*.
+[See Game Elements below](#game-elements)
 For example on the top row, starting from left, graphic is type 11, follow by type 21, type 13.
-Therefore from the start array, the graphic elements are populated based on the "type"
+Therefore from the start array, the graphic elements are populated based on the "type".
 * every click rotates the graphic element clock wise.
 * each click of the graphic element updates the play Array (var playArray). For example when top left graphic element is click, the playArray[0] is updated to 12, another click would update playArray[0] to 13. play Array (var playArray) is then compared with the solution Array (var solutionArray), if all indices values match, the solution is found.
-* the solution is then displayed (function displaySolution)
+* there are two special handling for "type" 5 and "type" 0, since they are symmterical in all orientation, there is no need to update the playArray.
+* the solution is then displayed (function displaySolution).
 
 Other level designs can be found here:
 * [Level 2](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level2.jpg)
@@ -37,10 +41,10 @@ Other level designs can be found here:
 * [Level 6](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level6.jpg)
 * [Level 7 start](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level7-start.jpg)
 * [Level 7 solution](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level7-solution.jpg)
-
-
-
 ---
+
+## Functions in the Game
+
 
 #### init ()
 * initialises game
@@ -59,7 +63,7 @@ Other level designs can be found here:
 * calls updatePlayArray function
 * checks if there is a solution (checkSolution function)
 
-#### updatePlayArray (elm)
+#### updatePlayArray ()
 * Updates the playArray
 
 #### checkSolution ()
@@ -108,7 +112,7 @@ Type 5 graphic element:
 ![Type 5](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type5.jpg)
 
 ---
-Type 1 graphic element:
+Type 0 graphic element:
 
 ![Type 0](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type0.jpg)
 
