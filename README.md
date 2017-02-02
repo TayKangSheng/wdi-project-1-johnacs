@@ -18,7 +18,7 @@ Read Me Contents
 
 #### displayGameOver ()
 function displays Game Over screen
-___
+---
 #### loadLevel (levelNum)
 - load level
 - initialise playArray

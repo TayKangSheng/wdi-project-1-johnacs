@@ -115,7 +115,7 @@ function init () {
 
 function showInstruction () {
   $('.instruction').append('<h2>How to play:</h2>')
-  $('.instruction').append('<p>Connect all the lines and corners to make perfect connections.</p>')
+  $('.instruction').append('<p>Click on any graphics element to rotate it. Connect all the lines and corners to make perfect connections.</p>')
 }
 
 function clearInstruction () {
