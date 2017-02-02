@@ -5,88 +5,113 @@
 #### [Live demo here](https://wdi-sg.github.io/wdi-project-1-johnacs/)
 
 ---
-### Gameplay
+## Gameplay
 ![How to play](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/instruction01.png)
----
-### Game Elements
-Type 1 graphics element:
 
-![Type 1](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type1.jpg)
+Click on any graphic element to rotate it.
 
----
-Type 2 graphics element:
+Connect all the lines and corners to make perfect connections.
 
-![Type 2](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type2.jpg)
+## Game Mechanics
 
----
-Type 3 graphics element:
+Using level 1 as an example:
 
-![Type 3](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type3.jpg)
+![Level 1](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level1.jpg)
 
----
-Type 4 graphics element:
 
-![Type 4](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type4.jpg)
+* each level has a 2D start array (var levelArray) and 2D solution array (var solutionArray)
+* there are 6 graphic elements into two rows
+* each graphic element corresponds to a "type".
+*See Game Elements below*.
+For example on the top row, starting from left, graphic is type 11, follow by type 21, type 13.
+Therefore from the start array, the graphic elements are populated based on the "type"
+* every click rotates the graphic element clock wise.
+* each click of the graphic element updates the play Array (var playArray). For example when top left graphic element is click, the playArray[0] is updated to 12, another click would update playArray[0] to 13. play Array (var playArray) is then compared with the solution Array (var solutionArray), if all indices values match, the solution is found.
+* the solution is then displayed (function displaySolution)
 
----
-Type 5 graphics element:
+Other level designs can be found here:
+* [Level 2](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level2.jpg)
+* [Level 3](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level3.jpg)
+* [Level 4](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level4.jpg)
+* [Level 5](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level5.jpg)
+* [Level 6](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level6.jpg)
+* [Level 7](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level7.jpg)
 
-![Type 5](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type5.jpg)
 
----
-Type 1 graphics element:
-
-![Type 0](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type0.jpg)
 
 ---
 
 #### init ()
-```
-Initialises game
-```
-#### displayGameOver ()
-```
-Displays "Game Over" screen
-```
+* initialises game
+* set level to 1
+* clear graphic element (clearGrids function)
+* show instruction text (showInstruction function)
+* load first level by calling loadLevel function
 
 #### loadLevel (levelNum)
-```
-- load level
-- initialise playArray
-- populate grid with image elements
-```
+* loads level
+* initialise playArray by making a copy of the levelArray (the starting orientation of the graphic element)
+* populate rows with graphic elements
 
-#### displaySolution (levelNum)
-
-```
-Displays solution
-
-```
-#### updatePlayArray (elm)
-
-```
-Updates the playArray
-```
-#### clearGrids ()
-
-```
-Clear grids of graphic elements
-```
-#### checkSolution ()
-
-```
-Checks playArray solutionArray
-```
 #### rotate ()
+* checks current graphic element orientation, then rotates graphic element by inserting a CSS animation class
+* calls updatePlayArray function
+* checks if there is a solution (checkSolution function)
 
-```
-Rotates graphic elements
-```
-#### myEndFunction ()
+#### updatePlayArray (elm)
+* Updates the playArray
 
+#### checkSolution ()
+Compares playArray against solutionArray for each click of graphic element, if true, call displaySolution function
 ```
-Rotates graphic elements
+if (checkSolution() === true) {
+    clearGrids()
+    displaySolution(currentLevel)
+  }
+}
 ```
+#### displaySolution (levelNum)
+* displays solution for current level
+* displays button to go to next level
+
+#### displayGameOver ()
+Displays "Game Over" screen
+
+#### clearGrids ()
+Clear rows of graphic elements
+
+---
+### Game Elements
+Type 1 graphic element:
+
+![Type 1](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type1.jpg)
+
+---
+Type 2 graphic element:
+
+![Type 2](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type2.jpg)
+
+---
+Type 3 graphic element:
+
+![Type 3](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type3.jpg)
+
+---
+Type 4 graphic element:
+
+![Type 4](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type4.jpg)
+
+---
+Type 5 graphic element:
+
+![Type 5](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type5.jpg)
+
+---
+Type 1 graphic element:
+
+![Type 0](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type0.jpg)
+
+---
 
 #### Technlogies used:
 ```
