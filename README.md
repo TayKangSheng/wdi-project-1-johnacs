@@ -41,6 +41,7 @@ Other level designs can be found here:
 * [Level 6](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level6.jpg)
 * [Level 7 start](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level7-start.jpg)
 * [Level 7 solution](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level7-solution.jpg)
+
 ---
 
 ## Functions in the Game
