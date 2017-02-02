@@ -6,16 +6,49 @@
 
 ---
 ### Gameplay
-![How to play](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/images/instruction01.png)
+![How to play](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/instruction01.png)
 ---
+### Game Elements
+Type 1 graphics element:
+
+![Type 1](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type1.jpg)
+
+---
+Type 2 graphics element:
+
+![Type 2](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type2.jpg)
+
+---
+Type 3 graphics element:
+
+![Type 3](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type3.jpg)
+
+---
+Type 4 graphics element:
+
+![Type 4](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type4.jpg)
+
+---
+Type 5 graphics element:
+
+![Type 5](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type5.jpg)
+
+---
+Type 1 graphics element:
+
+![Type 0](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/type0.jpg)
+
+---
+
 #### init ()
 ```
+Initialises game
 ```
 #### displayGameOver ()
 ```
 Displays "Game Over" screen
 ```
----
+
 #### loadLevel (levelNum)
 ```
 - load level
