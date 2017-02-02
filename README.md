@@ -30,12 +30,12 @@ Therefore from the start array, the graphic elements are populated based on the 
 * the solution is then displayed (function displaySolution)
 
 Other level designs can be found here:
-* [Level 2](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level2.jpg)
-* [Level 3](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level3.jpg)
-* [Level 4](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level4.jpg)
-* [Level 5](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level5.jpg)
-* [Level 6](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level6.jpg)
-* [Level 7](https://wdi-sg.github.io/wdi-project-1-johnacs/raw/master/assets/readme/level7.jpg)
+* [Level 2](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level2.jpg)
+* [Level 3](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level3.jpg)
+* [Level 4](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level4.jpg)
+* [Level 5](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level5.jpg)
+* [Level 6](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level6.jpg)
+* [Level 7](https://github.com/wdi-sg/wdi-project-1-johnacs/raw/master/assets/readme/level7.jpg)
 
 
 
