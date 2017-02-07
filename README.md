@@ -2,7 +2,7 @@
 
 #### This game is inspired by the popular app [Infinity Loop](https://play.google.com/store/apps/details?id=com.balysv.loop&hl=en)
 
-#### [Live demo here](https://wdi-sg.github.io/wdi-project-1-johnacs/)
+#### [Live demo here](https://johnacs.github.io/wdi-project-1-johnacs/)
 
 ---
 ## Gameplay
